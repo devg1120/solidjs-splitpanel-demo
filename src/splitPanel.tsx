@@ -1,5 +1,3 @@
-
-
 import type { ParentComponent, JSXElement } from 'solid-js';
 import { render } from "solid-js/web";
 import { createSignal, onMount } from "solid-js";
@@ -7,7 +5,6 @@ import { createSignal, onMount } from "solid-js";
 /*
  
 [solidjs]ドラッグで画面分割するコンポーネントを作ってみた
-
 https://qiita.com/mitsuki_march/items/e7e9fd6b675a27e75c41
 
 */
@@ -85,8 +82,6 @@ const PaneX: ParentComponent<{
 
   let onMouseDownHandler = (e: MouseEvent) => {
     onmousemove = (e: MouseEvent) => {
-      //console.log(e)
-      //console.log(paneContainerRef.offsetLeft)
       //setWidth(e.clientX - paneContainerRef.offsetLeft)
       setWidth(e.clientX - paneContainerRef.getBoundingClientRect().left)
     }
@@ -142,15 +137,6 @@ const PaneX: ParentComponent<{
 }
 
 
-
-
-/*
-<input  type="date" tabindex={9999} />
-
-  <div style="height: 100%">
-
-
-*/
 return (
   <>
   <div style="height: 100%">

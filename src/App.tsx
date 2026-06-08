@@ -27,13 +27,13 @@ function App() {
 */
 return (
   <>
-  <div style="height:100px"/>
-  <div style="height: 500px">
+  <div style="height:50px"/>
+  <div style="height: 500px;  width:800px;">
     <SplitPanel />
   </div>
 
-  <div style="height:100px"/>
-  <div style="height: 300px">
+  <div style="height:50px"/>
+  <div style="height:500px; width:600px;">
     <SplitPanel />
   </div>
 
