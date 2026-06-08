@@ -24,7 +24,7 @@ const PaneY: ParentComponent<{
 
   let onMouseDownHandler = (e: MouseEvent) => {
     onmousemove = (e: MouseEvent) => {
-      setHeight(e.clientY)
+      setHeight(e.clientY - paneContainerRef.offsetTop)
     }
     onmouseup = (e: MouseEvent) => {
       onmousemove = () => null
@@ -85,7 +85,9 @@ const PaneX: ParentComponent<{
 
   let onMouseDownHandler = (e: MouseEvent) => {
     onmousemove = (e: MouseEvent) => {
-      setWidth(e.clientX)
+      //console.log(e)
+      //console.log(paneContainerRef.offsetLeft)
+      setWidth(e.clientX - paneContainerRef.offsetLeft)
     }
     onmouseup = (e: MouseEvent) => {
       onmousemove = () => null
@@ -143,10 +145,15 @@ const PaneX: ParentComponent<{
 
 /*
 <input  type="date" tabindex={9999} />
+
+  <div style="height: 100%">
+
+
 */
 return (
   <>
-  <div style="height: 100vh">
+  <div style="height:100px"/>
+  <div style="height: 500px">
       <PaneY
         topElem={
           <PaneX
